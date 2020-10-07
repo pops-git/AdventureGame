@@ -86,7 +86,7 @@ namespace AdventureGame {
                 return;
             }
             else if (item2 == null) {
-                Console.WriteLine($"the item you are trying to use {item1.Name} on does not exist.");
+                Console.WriteLine($"the item you are trying to use {item1.Name} on does not exist in your bag.");
                 return;
             }
             else if (item1.UsableOn == item2) {
