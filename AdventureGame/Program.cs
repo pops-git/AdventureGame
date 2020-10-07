@@ -7,10 +7,13 @@ using System.Threading.Tasks;
 namespace AdventureGame {
     class Program {
         static void Main(string[] args) {
-            RunGame();
+            Console.WindowWidth = 104;
+            Art.IntroductionArt();
+            //RunGame();
             Console.ReadLine();
         }
         public static void RunGame() {
+            Art.IntroductionArt();
             string name = "linus";
             World ng = new World(name);
             do {
