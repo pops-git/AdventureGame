@@ -82,7 +82,7 @@ namespace AdventureGame {
         }
         public void UseItemOnItem(Item item1, Item item2) {
             if (item1 == null) {
-                Console.WriteLine("the item you are trying to use does not exist.");
+                Console.WriteLine("the item you are trying to use does not exist in your bag.");
                 return;
             }
             else if (item2 == null) {
