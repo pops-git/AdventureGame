@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace AdventureGame {
     class Program {
         static void Main(string[] args) {
-            Console.WindowWidth = 134;
+            Console.WindowWidth = 135;
             Art.IntroductionArt2();
             Console.ReadLine();
             Console.Clear();

@@ -33,6 +33,7 @@ namespace AdventureGame {
         public static void IntroductionArt2() {
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.CursorVisible = false;
+            Console.WriteLine("\n\n");
                 TypeAnimationL(@"▄▄▄█████▓ ██░ ██ ▓█████     ██░ ██  ▄▄▄       █    ██  ███▄    █ ▄▄▄█████▓▓█████ ▓█████▄     ██░ ██  ▒█████   █    ██   ██████ ▓█████ ");
                 TypeAnimationR(@"▓  ██▒ ▓▒▓██░ ██▒▓█   ▀    ▓██░ ██▒▒████▄     ██  ▓██▒ ██ ▀█   █ ▓  ██▒ ▓▒▓█   ▀ ▒██▀ ██▌   ▓██░ ██▒▒██▒  ██▒ ██  ▓██▒▒██    ▒ ▓█   ▀ ");
                 TypeAnimationL(@"▒ ▓██░ ▒░▒██▀▀██░▒███      ▒██▀▀██░▒██  ▀█▄  ▓██  ▒██░▓██  ▀█ ██▒▒ ▓██░ ▒░▒███   ░██   █▌   ▒██▀▀██░▒██░  ██▒▓██  ▒██░░ ▓██▄   ▒███   ");
@@ -45,9 +46,9 @@ namespace AdventureGame {
              Console.WriteLine(@"                                                                                  ░                                                   ");
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine("\n");
-                  AnimateRandom("                                               Copyright © 2020 by Linus Krönström");
+                  AnimateRandom("                                                  Copyright © 2020 by Linus Krönström");
             Console.WriteLine("\n");
-              Console.WriteLine("                                                    Press any key to continue");
+              Console.WriteLine("                                                       Press any key to continue");
              
         }
         public static void TypeAnimationL(string str) {
@@ -56,7 +57,7 @@ namespace AdventureGame {
                 Console.Write(str[i]);
                 for (int j = 0; j < 3000000; j++) ;
             }
-            //Console.WriteLine();
+            Console.WriteLine();
         }
         public static void TypeAnimationR(string str) {
             for (int i = str.Length - 1; i >= 0; --i) {
