@@ -7,26 +7,51 @@ using System.Threading.Tasks;
 namespace AdventureGame {
     public static class Art {
         public static void IntroductionArt1() {
-            Console.ForegroundColor = ConsoleColor.DarkCyan;
-            Console.CursorVisible = false;
-         Console.WriteLine(@"  o  8               8                            o              8   8                                  ");
-         Console.WriteLine(@"  8  8               8                            8              8   8                                  ");
-            TypeAnimationL(@" o8P 8oPYo. .oPYo.   8oPYo. .oPYo. o    o odYo.  o8P .oPYo. .oPYo8   8oPYo. .oPYo. o    o .oPYo. .oPYo. ");
-            TypeAnimationR(@"  8  8    8 8oooo8   8    8 .oooo8 8    8 8' `8   8  8oooo8 8    8   8    8 8    8 8    8 Yb..   8oooo8 ");
-            TypeAnimationL(@"  8  8    8 8.       8    8 8    8 8    8 8   8   8  8.     8    8   8    8 8    8 8    8   'Yb. 8.     ");
-            TypeAnimationR(@"  8  8    8 `Yooo'   8    8 `YooP8 `YooP' 8   8   8  `Yooo' `YooP'   8    8 `YooP' `YooP' `YooP' `Yooo' ");
-            TypeAnimationL(@"::..:..:::..:.....:::..:::..:.....::.....:..::..::..::.....::.....:::..:::..:.....::.....::.....::.....:");
-            TypeAnimationR(@"::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
-            TypeAnimationL(@"::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
+            Console.WriteLine("\n\n");
+            Console.WriteLine(@"▄▄▄█████▓ ██░ ██ ▓█████     ██░ ██  ▄▄▄       █    ██  ███▄    █ ▄▄▄█████▓▓█████ ▓█████▄     ██░ ██  ▒█████   █    ██   ██████ ▓█████ ");
+            Console.WriteLine(@"▓  ██▒ ▓▒▓██░ ██▒▓█   ▀    ▓██░ ██▒▒████▄     ██  ▓██▒ ██ ▀█   █ ▓  ██▒ ▓▒▓█   ▀ ▒██▀ ██▌   ▓██░ ██▒▒██▒  ██▒ ██  ▓██▒▒██    ▒ ▓█   ▀ ");
+            Console.WriteLine(@"▒ ▓██░ ▒░▒██▀▀██░▒███      ▒██▀▀██░▒██  ▀█▄  ▓██  ▒██░▓██  ▀█ ██▒▒ ▓██░ ▒░▒███   ░██   █▌   ▒██▀▀██░▒██░  ██▒▓██  ▒██░░ ▓██▄   ▒███   ");
+            Console.WriteLine(@"░ ▓██▓ ░ ░▓█ ░██ ▒▓█  ▄    ░▓█ ░██ ░██▄▄▄▄██ ▓▓█  ░██░▓██▒  ▐▌██▒░ ▓██▓ ░ ▒▓█  ▄ ░▓█▄   ▌   ░▓█ ░██ ▒██   ██░▓▓█  ░██░  ▒   ██▒▒▓█  ▄ ");
+            Console.WriteLine(@"  ▒██▒ ░ ░▓█▒░██▓░▒████▒   ░▓█▒░██▓ ▓█   ▓██▒▒▒█████▓ ▒██░   ▓██░  ▒██▒ ░ ░▒████▒░▒████▓    ░▓█▒░██▓░ ████▓▒░▒▒█████▓ ▒██████▒▒░▒████▒");
+            Console.WriteLine(@"  ▒ ░░    ▒ ░░▒░▒░░ ▒░ ░    ▒ ░░▒░▒ ▒▒   ▓▒█░░▒▓▒ ▒ ▒ ░ ▒░   ▒ ▒   ▒ ░░   ░░ ▒░ ░ ▒▒▓  ▒     ▒ ░░▒░▒░ ▒░▒░▒░ ░▒▓▒ ▒ ▒ ▒ ▒▓▒ ▒ ░░░ ▒░ ░");
+            Console.WriteLine(@"    ░     ▒ ░▒░ ░ ░ ░  ░    ▒ ░▒░ ░  ▒   ▒▒ ░░░▒░ ░ ░ ░ ░░   ░ ▒░    ░     ░ ░  ░ ░ ▒  ▒     ▒ ░▒░ ░  ░ ▒ ▒░ ░░▒░ ░ ░ ░ ░▒  ░ ░ ░ ░  ░");
+            Console.WriteLine(@"  ░       ░  ░░ ░   ░       ░  ░░ ░  ░   ▒    ░░░ ░ ░    ░   ░ ░   ░         ░    ░ ░  ░     ░  ░░ ░░ ░ ░ ▒   ░░░ ░ ░ ░  ░  ░     ░   ");
+            Console.WriteLine(@"          ░  ░  ░   ░  ░    ░  ░  ░      ░  ░   ░              ░             ░  ░   ░        ░  ░  ░    ░ ░     ░           ░     ░  ░");
+            Console.WriteLine(@"                                                                                  ░                                                   ");
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine("\n");
-            AnimateRandom("                                 Copyright © 2020 by Linus Krönström");
+            Console.WriteLine("                                                  Copyright © 2020 by Linus Krönström");
             Console.WriteLine("\n");
-        Console.WriteLine("                                      Press any key to continue");
+            Console.WriteLine("                                                       Press any key to continue");
 
         }
         public static void IntroductionArtColorSwap() {
-            Console.ForegroundColor = ConsoleColor.DarkCyan;
+            do {
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.Green;
+                IntroductionArt1();
+                for (int i = 0; i < 100000; i++) {
+                    if (Console.KeyAvailable) {
+                        return;
+                    }
+                }
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                IntroductionArt1();
+                for (int i = 0; i < 100000; i++) {
+                    if (Console.KeyAvailable) {
+                        return;
+                    }
+                }
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.Blue;
+                IntroductionArt1();
+                for (int i = 0; i < 100000; i++) {
+                    if (Console.KeyAvailable) {
+                        return;
+                    }
+                }
+            } while (true);
 
             
         }
@@ -49,13 +74,13 @@ namespace AdventureGame {
                   AnimateRandom("                                                  Copyright © 2020 by Linus Krönström");
             Console.WriteLine("\n");
               Console.WriteLine("                                                       Press any key to continue");
-             
+            IntroductionArtColorSwap();
         }
         public static void TypeAnimationL(string str) {
             
             for (int i = 0; i < str.Length; i++) {
                 Console.Write(str[i]);
-                for (int j = 0; j < 3000000; j++) ;
+                for (int j = 0; j < 2000000; j++) ;
             }
             Console.WriteLine();
         }
@@ -63,7 +88,7 @@ namespace AdventureGame {
             for (int i = str.Length - 1; i >= 0; --i) {
                 Console.SetCursorPosition(i, Console.CursorTop);
                 Console.Write(str[i]);
-                for (int j = 0; j < 3000000; ++j) ;
+                for (int j = 0; j < 2000000; ++j) ;
             }
             Console.WriteLine();
         }
