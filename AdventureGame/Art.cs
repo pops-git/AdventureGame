@@ -46,6 +46,7 @@ namespace AdventureGame {
             Console.WriteLine("\n                                    Press any key to continue..");
         }
         public static void TypeAnimationL(string str) {
+            
             for (int i = 0; i < str.Length; i++) {
                 Console.Write(str[i]);
                 for (int j = 0; j < 3000000; j++) ;
@@ -53,6 +54,7 @@ namespace AdventureGame {
             Console.WriteLine();
         }
         public static void TypeAnimationR(string str) {
+            
             for (int i = str.Length - 1; i >= 0; --i) {
                 Console.SetCursorPosition(i, Console.CursorTop);
                 Console.Write(str[i]);

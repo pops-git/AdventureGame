@@ -9,11 +9,12 @@ namespace AdventureGame {
         static void Main(string[] args) {
             Console.WindowWidth = 104;
             Art.IntroductionArt();
-            //RunGame();
+            Console.ReadLine();
+            Console.Clear();
+            RunGame();
             Console.ReadLine();
         }
         public static void RunGame() {
-            Art.IntroductionArt();
             string name = "linus";
             World ng = new World(name);
             do {
