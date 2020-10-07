@@ -17,22 +17,23 @@ namespace AdventureGame {
             MyWorld = myworld;
             CurrentRoom = MyWorld.Rooms.Where(room => room.Name == "livingroom").FirstOrDefault();
             Art.LivingroomArt();
+            PrintCommands();
             Console.WriteLine(this.CurrentRoom.Info);
         }
         public void CheckBag() {
             if (this.Bag.Count > 0) {
-                string itemsInBag = "Your bag contains: ";
+                string itemsInBag = "your bag contains: ";
                 foreach (var item in Bag) {
                     itemsInBag += $"{item.Name}, ";
                 }
                 Console.WriteLine(itemsInBag.Remove(itemsInBag.Length - 2));
             }
             else {
-                Console.WriteLine("There are no items in your bag.");
+                Console.WriteLine("there are no items in your bag.");
             }
         }
         public void PrintCommands() {
-            Console.WriteLine("Your commands are: Bag, Go, Get, Drop, Use, Look, Inspect, Help");
+            Console.WriteLine("\nyour commands are: bag, go, get, drop, use, look, inspect, help\n");
         }
         public void Look() {
             Console.WriteLine(this.CurrentRoom.Info);
@@ -61,7 +62,7 @@ namespace AdventureGame {
             if (this.CurrentRoom.Items.Contains(item)) {
                 this.Bag.Add(item);
                 this.CurrentRoom.Items.Remove(item);
-                Console.WriteLine($"You got {item.Name}!");
+                Console.WriteLine($"you got {item.Name}!");
             }
             else {
                 Console.WriteLine($"{this.CurrentRoom.Name} does not contain that item.");
@@ -71,7 +72,7 @@ namespace AdventureGame {
         public void DropItem(Item item) {
             this.CurrentRoom.Items.Add(item);
             this.Bag.Remove(item);
-            Console.WriteLine($"You dropped {item.Name} in {this.CurrentRoom.Name}");
+            Console.WriteLine($"you dropped {item.Name} in {this.CurrentRoom.Name}");
         }
         public void InspectItem(Item item) {
             if (item != null) {
@@ -100,10 +101,10 @@ namespace AdventureGame {
                         MyWorld.Keywords.Add(item.Name);
                     }
                 }
-                Console.WriteLine($"You got {this.Bag.Last().Name} from {item2.Name}.");
+                Console.WriteLine($"you got {this.Bag.Last().Name} from {item2.Name}.");
             }
             else {
-                Console.WriteLine($"Unable to use {item1.Name} on {item2.Name}.");
+                Console.WriteLine($"unable to use {item1.Name} on {item2.Name}.");
             }
         }
         public void UseItemOnDoor(Item item, Door door) {
@@ -115,7 +116,7 @@ namespace AdventureGame {
                 Console.WriteLine($"{door.Name} is now unlocked.");
             }
             else {
-                Console.WriteLine($"Unable to open {door.Name} with {item.Name}.");
+                Console.WriteLine($"unable to open {door.Name} with {item.Name}.");
             }
         }
         public void Go(string direction) {
@@ -129,10 +130,11 @@ namespace AdventureGame {
                     if (this.CurrentRoom.Name == "kitchen") {
                         Art.KitchenArt();
                     }
+                    this.PrintCommands();
                     Console.WriteLine(this.CurrentRoom.Info);
                     canGo = true;
                     if (this.CurrentRoom.IsEndPoint) {
-                        Console.WriteLine("\nYou beat the demo!");
+                        Art.EndOfDemoArt();
                     }
                 }
                 else if (door.CardinalDirection.ToLower() == direction.ToLower() && !door.IsOpen) {
@@ -140,7 +142,7 @@ namespace AdventureGame {
                 }
             }
             if (!canGo) {
-                Console.WriteLine($"Unable to go {direction}");
+                Console.WriteLine($"unable to go {direction}");
             }
         }
     }

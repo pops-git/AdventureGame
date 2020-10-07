@@ -20,9 +20,9 @@ namespace AdventureGame {
             Console.WriteLine(@"                                                                                  ░                                                   ");
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine("\n");
-            Console.WriteLine("                                                  Copyright © 2020 by Linus Krönström");
+            Console.WriteLine("                                                Copyright © 2020 by Linus Krönström");
             Console.WriteLine("\n");
-            Console.WriteLine("                                                       Press any key to continue");
+            Console.WriteLine("                                                     Press any key to continue");
 
         }
         public static void IntroductionArtColorSwap() {
@@ -69,9 +69,9 @@ namespace AdventureGame {
              Console.WriteLine(@"                                                                                  ░                                                   ");
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine("\n");
-                  AnimateRandom("                                                  Copyright © 2020 by Linus Krönström");
+                  AnimateRandom("                                                Copyright © 2020 by Linus Krönström");
             Console.WriteLine("\n");
-              Console.WriteLine("                                                       Press any key to continue");
+              Console.WriteLine("                                                     Press any key to continue");
             IntroductionArtColorSwap();
         }
         public static void LivingroomArt() {
@@ -86,7 +86,7 @@ namespace AdventureGame {
             TypeAnimationL(@"(|  '---.',|  |_.'   \     /__),|  |_.'|  |\    | (|  | '. (_/|  .  '.'  \ |  | |  |  \ |  | |  ||  |   |  | ");
             TypeAnimationR(@" |      |(_|  |       \   /   (_|  |   |  | \   |  |  '--'  | |  |\  \    `'  '-'  '   `'  '-'  '|  |   |  | ");
             TypeAnimationL(@" `------'  `--'        `-'      `--'   `--'  `--'   `------'  `--' '--'     `-----'      `-----' `--'   `--' ");
-            Console.WriteLine("\n\n\n\n\n");
+            Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.Gray;
         }
         public static void KitchenArt() {
@@ -101,14 +101,27 @@ namespace AdventureGame {
                     TypeAnimationL(@"|  .   \  ,|  |_.'   |  |  ||  |`-'| |  .-.  | |  .--' |  |\    |   ");
                     TypeAnimationR(@"|  |\   \(_|  |      |  | (_'  '--'\ |  | |  | |  `---.|  | \   |   ");
                     TypeAnimationL(@"`--' '--'  `--'      `--'    `-----' `--' `--' `------'`--'  `--'   ");
-                    Console.WriteLine("\n\n\n\n\n");
+                    Console.WriteLine();
                     Console.ForegroundColor = ConsoleColor.Gray;
+        }
+        public static void EndOfDemoArt() {
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
+                TypeAnimationL(@"   ('-.       .-') _  _ .-') _                                       _ .-') _     ('-.  _   .-')                ");
+                TypeAnimationR(@" _(  OO)     ( OO ) )( (  OO) )                                     ( (  OO) )  _(  OO)( '.( OO )_              ");
+                TypeAnimationL(@"(,------.,--./ ,--,'  \     .'_        .-'),-----.    ,------.       \     .'_ (,------.,--.   ,--.).-'),-----. ");
+                TypeAnimationR(@" |  .---'|   \ |  |\  ,`'--..._)      ( OO'  .-.  '('-| _.---'       ,`'--..._) |  .---'|   `.'   |( OO'  .-.  '");
+                TypeAnimationL(@" |  |    |    \|  | ) |  |  \  '      /   |  | |  |(OO|(_\           |  |  \  ' |  |    |         |/   |  | |  |");
+                TypeAnimationR(@"(|  '--. |  .     |/  |  |   ' |      \_) |  |\|  |/  |  '--.        |  |   ' |(|  '--. |  |'.'|  |\_) |  |\|  |");
+                TypeAnimationL(@" |  .--' |  |\    |   |  |   / :        \ |  | |  |\_)|  .--'        |  |   / : |  .--' |  |   |  |  \ |  | |  |");
+                TypeAnimationR(@" |  `---.|  | \   |   |  '--'  /         `'  '-'  '  \|  |_)         |  '--'  / |  `---.|  |   |  |   `'  '-'  '");
+                TypeAnimationL(@" `------'`--'  `--'   `-------'            `-----'    `--'           `-------'  `------'`--'   `--'     `-----' ");
         }
         public static void TypeAnimationL(string str) {
             
             for (int i = 0; i < str.Length; i++) {
                 Console.Write(str[i]);
-                for (int j = 0; j < 1200000; j++) ;
+                for (int j = 0; j < 1000000; j++) ;
             }
             Console.WriteLine();
         }
@@ -116,7 +129,7 @@ namespace AdventureGame {
             for (int i = str.Length - 1; i >= 0; --i) {
                 Console.SetCursorPosition(i, Console.CursorTop);
                 Console.Write(str[i]);
-                for (int j = 0; j < 1200000; ++j) ;
+                for (int j = 0; j < 1000000; ++j) ;
             }
             Console.WriteLine();
         }
@@ -130,7 +143,7 @@ namespace AdventureGame {
                 indices.RemoveAt(j);
                 Console.SetCursorPosition(index, Console.CursorTop);
                 Console.Write(str[index]);
-                for (int k = 0; k < 20000000; ++k) ;
+                for (int k = 0; k < 13000000; ++k) ;
             }
         }
     }
