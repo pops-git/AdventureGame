@@ -73,7 +73,12 @@ namespace AdventureGame {
             Console.WriteLine($"You dropped {item.Name} in {this.CurrentRoom.Name}");
         }
         public void InspectItem(Item item) {
-            Console.WriteLine(item.Info);
+            if (item != null) {
+                Console.WriteLine(item.Info);
+            }
+            else {
+                Console.WriteLine("no such item exist in your bag.");
+            }
         }
         public void UseItemOnItem(Item item1, Item item2) {
             if (item1 == null) {
