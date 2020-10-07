@@ -11,6 +11,7 @@ namespace AdventureGame {
             Art.IntroductionArt2();
             Console.ReadLine();
             Console.Clear();
+            Console.CursorVisible = true;
             RunGame();
             Console.ReadLine();
         }

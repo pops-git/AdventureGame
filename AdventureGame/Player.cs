@@ -16,6 +16,7 @@ namespace AdventureGame {
             Name = name;
             MyWorld = myworld;
             CurrentRoom = MyWorld.Rooms.Where(room => room.Name == "livingroom").FirstOrDefault();
+            Art.LivingroomArt();
             Console.WriteLine(this.CurrentRoom.Info);
         }
         public void CheckBag() {
@@ -123,6 +124,12 @@ namespace AdventureGame {
                 if (door.CardinalDirection.ToLower() == direction.ToLower() && door.IsOpen) {
                     this.CurrentRoom = door.LeadsTo;
                     Console.WriteLine(this.CurrentRoom.Info);
+                    if (this.CurrentRoom.Name == "livingroom") {
+                        Art.LivingroomArt();
+                    }
+                    if (this.CurrentRoom.Name == "kitchen") {
+                        Art.KitchenArt();
+                    }
                     canGo = true;
                     if (this.CurrentRoom.IsEndPoint) {
                         Console.WriteLine("\nYou beat the demo!");
