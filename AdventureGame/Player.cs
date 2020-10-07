@@ -123,13 +123,13 @@ namespace AdventureGame {
             foreach (var door in this.CurrentRoom.Doors) {
                 if (door.CardinalDirection.ToLower() == direction.ToLower() && door.IsOpen) {
                     this.CurrentRoom = door.LeadsTo;
-                    Console.WriteLine(this.CurrentRoom.Info);
                     if (this.CurrentRoom.Name == "livingroom") {
                         Art.LivingroomArt();
                     }
                     if (this.CurrentRoom.Name == "kitchen") {
                         Art.KitchenArt();
                     }
+                    Console.WriteLine(this.CurrentRoom.Info);
                     canGo = true;
                     if (this.CurrentRoom.IsEndPoint) {
                         Console.WriteLine("\nYou beat the demo!");
