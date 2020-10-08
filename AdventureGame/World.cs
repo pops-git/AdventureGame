@@ -23,7 +23,7 @@ namespace AdventureGame {
         public void CreateRooms() {
             Rooms.AddRange(new List<Room> {
                 new Room("livingroom", "you find yourself in a large dusty livingroom.\nthere are two doors, one to the north and one to the east.", false),
-                new Room("kitchen", "you find yourself in a small broken kitchen.\nthere are one door, the one you came from, to the south.", false),
+                new Room("kitchen", "you find yourself in a small broken kitchen.\nthere is one door, the one you came from, to the south.", false),
                 new Room("cellar", "you find yourself in a pitch black cellar", true)
             });
         }
