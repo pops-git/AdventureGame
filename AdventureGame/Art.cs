@@ -26,32 +26,18 @@ namespace AdventureGame {
 
         }
         public static void IntroductionArtColorSwap() {
-            do {
-                Console.Clear();
-                Console.ForegroundColor = ConsoleColor.Green;
-                IntroductionArt1();
-                for (int i = 0; i < 70000; i++) {
-                    if (Console.KeyAvailable) {
-                        return;
+            while (true) {
+                for (int i = 1; i < 15; ++i) {
+                    Console.SetCursorPosition(0, 0);
+                    Console.ForegroundColor = (ConsoleColor)i;
+                    IntroductionArt1();
+                    for (int j = 0; j < 70000; j++) {
+                        if (Console.KeyAvailable) {
+                            return;
+                        }
                     }
                 }
-                Console.Clear();
-                Console.ForegroundColor = ConsoleColor.Cyan;
-                IntroductionArt1();
-                for (int i = 0; i < 70000; i++) {
-                    if (Console.KeyAvailable) {
-                        return;
-                    }
-                }
-                Console.Clear();
-                Console.ForegroundColor = ConsoleColor.Blue;
-                IntroductionArt1();
-                for (int i = 0; i < 70000; i++) {
-                    if (Console.KeyAvailable) {
-                        return;
-                    }
-                }
-            } while (true);
+            }
         }
         public static void IntroductionArt2() {
             Console.ForegroundColor = ConsoleColor.DarkCyan;
