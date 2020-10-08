@@ -20,7 +20,10 @@ namespace AdventureGame {
             World ng = new World(name);
             do {
                 try {
+                    //string cmd = Console.ReadLine();
+                    //Scroll.ScrollText();
                     Interpreter.Interpret(Console.ReadLine(), ng);
+                    //Scroll.ScrollText();
                 }
                 catch (Exception ex) {
                     Console.WriteLine($"\n{ex.Message}\n");
