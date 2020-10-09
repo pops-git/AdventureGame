@@ -10,7 +10,8 @@ namespace AdventureGame {
             Console.WindowWidth = 135;
             Art.IntroductionArt2();
             Console.ReadLine();
-            Console.Clear();
+            //Console.Clear();
+            Console.SetCursorPosition(0, 0);
             Console.CursorVisible = true;
             RunGame();
             Console.ReadLine();

@@ -20,9 +20,7 @@ namespace AdventureGame {
             Console.WriteLine(@"                                                                                  ░                                                   ");
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine("\n");
-            Console.WriteLine("                                                Copyright © 2020 by Linus Krönström");
-            Console.WriteLine("\n");
-            Console.WriteLine("                                                     Press any key to continue");
+            Console.WriteLine("                                                Copyright © 2020 by Linus Krönström\n\n");
 
         }
         public static void IntroductionArtColorSwap() {
@@ -57,7 +55,7 @@ namespace AdventureGame {
             Console.WriteLine("\n");
                   AnimateRandom("                                                Copyright © 2020 by Linus Krönström");
             Console.WriteLine("\n");
-              Console.WriteLine("                                                     Press any key to continue");
+              Console.WriteLine("                                                    Press enter key to continue");
             IntroductionArtColorSwap();
         }
         public static void LivingroomArt() {
