@@ -22,9 +22,11 @@ namespace AdventureGame {
         }
         public void CreateRooms() {
             Rooms.AddRange(new List<Room> {
-                new Room("livingroom", "you find yourself in a large dusty livingroom.\nthere are two doors, one to the north and one to the east.", false),
-                new Room("kitchen", "you find yourself in a small broken kitchen.\nthere is one door, the one you came from, to the south.", false),
-                new Room("cellar", "you find yourself in a pitch black cellar", true)
+                new Room("livingroom", "you find yourself in a large dusty livingroom.\nthe wooden floor is uneaven and there are barely any furniture in the room.\n" +
+                "there are two doors, one to the north and one to the east. the northern door seems slightly open.", false),
+                new Room("kitchen", "you find yourself in a small kitchen.\nthe refrigerator is wide open and you can see it containing smelly leftovers from god-knows-when.\n" +
+                "there is but one door in the kitchen, the southern one you just came from.", false),
+                new Room("cellar", "you find yourself in a pitch black cellar...", true)
             });
         }
         public void CreateDoors() {
@@ -41,16 +43,18 @@ namespace AdventureGame {
                 .FirstOrDefault();
 
             kitchen.Items.Add(
-                new Item("box", "small wooden box",
-                new Item("envelope", "envelope with something inside",
-                new Item("silverkey", "shiny new looking silver key"))));
+                new Item("box", "small wooden box that appears to be able to break if any force is applied to it.",
+                new Item("envelope", "envelope with something small but heavy inside.",
+                new Item("silverkey", "shiny silver key that looks newly polished."))));
 
             livingroom.Items.Add(
                 new Item("crowbar",
                 kitchen.Items.Where(item => item.Name == "box").FirstOrDefault(),
-                "weak rusty crowbar"));
+                "rusty crowbar, seems functionable."));
 
-            livingroom.Items.Add(new Item("letter-opener", Rooms.Where(room => room.Name == "kitchen").FirstOrDefault().Items.Where(item => item.ItemInside.Name == "envelope").FirstOrDefault().ItemInside, "sharp letter-opener, perfect for opening letters."));
+            livingroom.Items.Add(new Item("letter-opener",
+                Rooms.Where(room => room.Name == "kitchen").FirstOrDefault().Items.Where(item => item.ItemInside.Name == "envelope").FirstOrDefault().ItemInside,
+                "sharp letter-opener, perfect for opening letters."));
         }
         public void SetOpenableDoorsPairs() {
             OpenableDoors.Add("silverkey", "cellar-door");

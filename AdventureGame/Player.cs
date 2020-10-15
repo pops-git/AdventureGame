@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AdventureGame {
     public class Player {
@@ -33,16 +30,23 @@ namespace AdventureGame {
             }
         }
         public void PrintCommands() {
-            Console.WriteLine("\nyour commands are: bag, go, get, drop, use, look, inspect, help\n");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("\n" +
+                "------------------------------------------------------------------------------------------------\n" +
+                "|| bag                      checks your inventory || go              go north/west/east/south ||\n" +
+                "|| get                      tries to pick up item || drop         tries to drop item from bag ||\n" +
+                "|| use          use item on item in bag or a door || look            check what room contains ||\n" +
+                "|| inspect                        inspect an item || help               prints these commands ||\n" +
+                "------------------------------------------------------------------------------------------------\n\n");
+            Console.ForegroundColor = ConsoleColor.Gray;
         }
         public void Look() {
-            Console.WriteLine(this.CurrentRoom.Info);
             if (this.CurrentRoom.Items.Count > 0) {
                 string itemsInRoom = "";
                 foreach (var item in this.CurrentRoom.Items) {
                     itemsInRoom += $"{item.Name}, ";
                 }
-                Console.WriteLine($"{this.CurrentRoom.Name} items: {itemsInRoom.Remove(itemsInRoom.Length - 2)}.");
+                Console.WriteLine($"{this.CurrentRoom.Name} items: {itemsInRoom.Remove(itemsInRoom.Length - 2)}");
             }
             else {
                 Console.WriteLine($"no items in {this.CurrentRoom.Name}.");
@@ -108,10 +112,15 @@ namespace AdventureGame {
             }
         }
         public void UseItemOnDoor(Item item, Door door) {
-            if (item == null || door == null) {
-                Console.WriteLine("");
+            if (item == null) {
+                Console.WriteLine("the item you are trying to use does not exist in your bag.");
+                return;
             }
-            if (MyWorld.IsOpenable(item.Name, door.Name)) {
+            else if (door == null) {
+                Console.WriteLine($"the door you are trying to use {item.Name} on does not exist in your current room.");
+                return;
+            }
+            else if (MyWorld.IsOpenable(item.Name, door.Name)) {
                 door.IsOpen = true;
                 Console.WriteLine($"{door.Name} is now unlocked.");
             }

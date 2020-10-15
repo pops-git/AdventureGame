@@ -23,21 +23,8 @@ namespace AdventureGame {
             Console.WriteLine("                                                Copyright © 2020 by Linus Krönström\n\n");
 
         }
-        public static void IntroductionArtColorSwap() {
-            while (true) {
-                for (int i = 1; i < 15; ++i) {
-                    Console.SetCursorPosition(0, 0);
-                    Console.ForegroundColor = (ConsoleColor)i;
-                    IntroductionArt1();
-                    for (int j = 0; j < 70000; j++) {
-                        if (Console.KeyAvailable) {
-                            return;
-                        }
-                    }
-                }
-            }
-        }
         public static void IntroductionArt2() {
+            Console.WindowWidth = 135;
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.CursorVisible = false;
             Console.WriteLine("\n\n");
@@ -58,8 +45,23 @@ namespace AdventureGame {
               Console.WriteLine("                                                    Press enter key to continue");
             IntroductionArtColorSwap();
         }
+        public static void IntroductionArtColorSwap() {
+            while (true) {
+                for (int i = 1; i < 15; ++i) {
+                    Console.SetCursorPosition(0, 0);
+                    Console.ForegroundColor = (ConsoleColor)i;
+                    IntroductionArt1();
+                    for (int j = 0; j < 70000; j++) {
+                        if (Console.KeyAvailable) {
+                            return;
+                        }
+                    }
+                }
+            }
+        }
         public static void LivingroomArt() {
             Console.Clear();
+            Console.WindowHeight = 40;
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             TypeAnimationL(@"                        (`-.                .-') _            _  .-')                            _   .-')    ");
             TypeAnimationR(@"                      _(OO  )_             ( OO ) )          ( \( -O )                          ( '.( OO )_  ");
@@ -74,19 +76,19 @@ namespace AdventureGame {
             Console.ForegroundColor = ConsoleColor.Gray;
         }
         public static void KitchenArt() {
-                    Console.Clear();
-                    Console.ForegroundColor = ConsoleColor.DarkCyan;
-                    TypeAnimationL(@".-. .-')           .-') _             ('-. .-.   ('-.       .-') _  ");
-                    TypeAnimationR(@"\  ( OO )         (  OO) )           ( OO )  / _(  OO)     ( OO ) ) ");
-                    TypeAnimationL(@",--. ,--.  ,-.-') /     '._  .-----. ,--. ,--.(,------.,--./ ,--,'  ");
-                    TypeAnimationR(@"|  .'   /  |  |OO)|'--...__)'  .--./ |  | |  | |  .---'|   \ |  |\  ");
-                    TypeAnimationL(@"|      /,  |  |  \'--.  .--'|  |('-. |   .|  | |  |    |    \|  | ) ");
-                    TypeAnimationR(@"|     ' _) |  |(_/   |  |  /_) |OO  )|       |(|  '--. |  .     |/  ");
-                    TypeAnimationL(@"|  .   \  ,|  |_.'   |  |  ||  |`-'| |  .-.  | |  .--' |  |\    |   ");
-                    TypeAnimationR(@"|  |\   \(_|  |      |  | (_'  '--'\ |  | |  | |  `---.|  | \   |   ");
-                    TypeAnimationL(@"`--' '--'  `--'      `--'    `-----' `--' `--' `------'`--'  `--'   ");
-                    Console.WriteLine();
-                    Console.ForegroundColor = ConsoleColor.Gray;
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
+            TypeAnimationL(@".-. .-')           .-') _             ('-. .-.   ('-.       .-') _  ");
+            TypeAnimationR(@"\  ( OO )         (  OO) )           ( OO )  / _(  OO)     ( OO ) ) ");
+            TypeAnimationL(@",--. ,--.  ,-.-') /     '._  .-----. ,--. ,--.(,------.,--./ ,--,'  ");
+            TypeAnimationR(@"|  .'   /  |  |OO)|'--...__)'  .--./ |  | |  | |  .---'|   \ |  |\  ");
+            TypeAnimationL(@"|      /,  |  |  \'--.  .--'|  |('-. |   .|  | |  |    |    \|  | ) ");
+            TypeAnimationR(@"|     ' _) |  |(_/   |  |  /_) |OO  )|       |(|  '--. |  .     |/  ");
+            TypeAnimationL(@"|  .   \  ,|  |_.'   |  |  ||  |`-'| |  .-.  | |  .--' |  |\    |   ");
+            TypeAnimationR(@"|  |\   \(_|  |      |  | (_'  '--'\ |  | |  | |  `---.|  | \   |   ");
+            TypeAnimationL(@"`--' '--'  `--'      `--'    `-----' `--' `--' `------'`--'  `--'   ");
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Gray;
         }
         public static void EndOfDemoArt() {
                 Console.Clear();
