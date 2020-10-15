@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace AdventureGame {
     public static class Scroll {
+        //work in progress, trying to get the text to scroll as you play.
         public static void ScrollText() {
             Console.MoveBufferArea(0, 10, Console.BufferWidth, 6, 0, 9);
             Console.SetCursorPosition(0, 9);
