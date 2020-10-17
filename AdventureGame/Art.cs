@@ -104,7 +104,6 @@ namespace AdventureGame {
                 TypeAnimationL(@" `------'`--'  `--'   `-------'            `-----'    `--'           `-------'  `------'`--'   `--'     `-----' ");
         }
         public static void TypeAnimationL(string str) {
-            
             for (int i = 0; i < str.Length; i++) {
                 Console.Write(str[i]);
                 for (int j = 0; j < 1000000; j++) ;

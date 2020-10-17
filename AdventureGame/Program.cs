@@ -7,10 +7,7 @@ namespace AdventureGame {
             Console.ReadLine();
         }
         public static void RunGame() {
-            Art.IntroductionArt2();
-            Console.ReadLine();
-            Console.SetCursorPosition(0, 0);
-            Console.CursorVisible = true;
+            RunIntroduction();
             string name = "linus";
             World ng = new World(name);
             do {
@@ -21,6 +18,12 @@ namespace AdventureGame {
                     Console.WriteLine($"\n{ex.Message}\n");
                 }
             } while (!ng.player.CurrentRoom.IsEndPoint);
+        }
+        public static void RunIntroduction() {
+            Art.IntroductionArt2();
+            Console.ReadLine();
+            Console.SetCursorPosition(0, 0);
+            Console.CursorVisible = true;
         }
     }
 }
