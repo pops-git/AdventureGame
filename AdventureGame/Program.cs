@@ -2,6 +2,12 @@
 
 namespace AdventureGame {
     class Program {
+        /* To-Do list:
+         * lösa grafik per tid istället för loopar.
+         * inte jämföra fritext, bara variabler/konstanter
+         * 
+         * tänka på vem jag skriver koden för (relaterar till struktur och namnsättning)
+         */
         static void Main(string[] args) {
             RunGame();
             Console.ReadLine();
