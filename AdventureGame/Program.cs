@@ -4,7 +4,8 @@ namespace AdventureGame {
     class Program {
         /* To-Do list:
          * lösa grafik per tid istället för loopar.
-         * problematik: windows diskretiserar sleep till multiplier av 16ms?
+         * problematik: windows sleep granularity är ish 16ms.
+         * detta gör en lösning med sleep omöjlig då 16 ms är för lång tid i detta fall.
          * lösning: räkna milliseconds med hjälp av datetime.
          * 
          * inte jämföra fritext, bara variabler/konstanter
