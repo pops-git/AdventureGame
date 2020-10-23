@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 
 namespace AdventureGame {
     public static class Art {
@@ -104,7 +105,13 @@ namespace AdventureGame {
         public static void TypeAnimationL(string str) {
             for (int i = 0; i < str.Length; i++) {
                 Console.Write(str[i]);
-                for (int j = 0; j < 1000000; j++) ;
+                var startDateTime = DateTime.Now;
+                while (true) {
+                    var diff = DateTime.Now - startDateTime;
+                    if (diff.TotalMilliseconds > 2) {
+                        break;
+                    }
+                }
             }
             Console.WriteLine();
         }
@@ -112,7 +119,13 @@ namespace AdventureGame {
             for (int i = str.Length - 1; i >= 0; --i) {
                 Console.SetCursorPosition(i, Console.CursorTop);
                 Console.Write(str[i]);
-                for (int j = 0; j < 1000000; ++j) ;
+                var startDateTime = DateTime.Now;
+                while (true) {
+                    var diff = DateTime.Now - startDateTime;
+                    if (diff.TotalMilliseconds > 2) {
+                        break;
+                    }
+                }
             }
             Console.WriteLine();
         }
