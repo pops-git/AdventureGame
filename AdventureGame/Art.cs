@@ -139,7 +139,13 @@ namespace AdventureGame {
                 indices.RemoveAt(j);
                 Console.SetCursorPosition(index, Console.CursorTop);
                 Console.Write(str[index]);
-                for (int k = 0; k < 13000000; ++k) ;
+                var startDateTime = DateTime.Now;
+                while (true){
+                    var diff = DateTime.Now - startDateTime;
+                    if (diff.TotalMilliseconds > 20){
+                        break;
+                    }
+                }
             }
         }
     }

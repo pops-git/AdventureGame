@@ -3,6 +3,7 @@
 namespace AdventureGame {
     class Program {
         /* To-Do list:
+         * 
          * lösa grafik per tid istället för loopar.
          * problematik: windows sleep granularity är ish 16ms.
          * detta gör en lösning med sleep omöjlig då 16 ms är för lång tid i detta fall.
