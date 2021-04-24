@@ -2,17 +2,6 @@
 
 namespace AdventureGame {
     class Program {
-        /* To-Do list:
-         * 
-         * lösa grafik per tid istället för loopar.
-         * problematik: windows sleep granularity är ish 16ms.
-         * detta gör en lösning med sleep omöjlig då 16 ms är för lång tid i detta fall.
-         * lösning: räkna milliseconds med hjälp av datetime.
-         * 
-         * inte jämföra fritext, bara variabler/konstanter
-         * 
-         * tänka på vem jag skriver koden för (relaterar till struktur och namnsättning)
-         */
         static void Main(string[] args) {
             RunGame();
             Console.ReadLine();
