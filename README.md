@@ -8,3 +8,13 @@ Introduction
 Gameplay
 
 ![screenshot](https://github.com/pops-git/AdventureGame/blob/master/Images/Kitchen.jpg)
+
+# Prerequisites
+
+You will need:
+* Visual Studio
+
+# Getting started
+
+1. Clone Repository
+2. Open .sln file and press Start (or press F5).
